@@ -1,0 +1,36 @@
+{
+  "manifest_version": 2,
+
+  "name": "My First Chrome App",
+  "version": "1.0",
+
+  "app": {
+    "background": {
+      "scripts": [ "background.js" ],
+      "persistent": true
+    }
+  },
+
+  "permissions": ["app.window",
+        "experimental",
+        "usb","hid", {
+      "usbDevices": [
+        { "vendorId": 7247, "productId": 2 },
+        { "vendorId": 1118, "productId": 203 },
+        { "vendorId": 3118, "productId": 518 },
+        { "vendorId": 1150, "productId": 4097 }
+        
+      ]
+    }
+  ],
+  "optional_permissions": [ 
+    {
+      "usbDevices": [
+        { "vendorId": 7247, "productId": 2 },
+        { "vendorId": 1118, "productId": 203 },
+        { "vendorId": 3118, "productId": 518 },
+        { "vendorId": 1150, "productId": 4097 }
+      ]
+    }
+  ]
+}
